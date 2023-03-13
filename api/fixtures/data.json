@@ -1,0 +1,35 @@
+[
+  {
+    "model": "api.tier",
+    "pk": 1,
+    "fields": {
+      "name": "Basic",
+      "link_to_thumbnail200_file": "True",
+      "link_to_thumbnail400_file": "False",
+      "link_to_original_file": "False",
+      "generate_expiring_link": "False"
+    }
+  },
+  {
+    "model": "api.tier",
+    "pk": 2,
+    "fields": {
+      "name": "Premium",
+      "link_to_thumbnail200_file": "True",
+      "link_to_thumbnail400_file": "True",
+      "link_to_original_file": "True",
+      "generate_expiring_link": "False"
+    }
+  },
+  {
+    "model": "api.tier",
+    "pk": 3,
+    "fields": {
+      "name": "Enterprise",
+      "link_to_thumbnail200_file": "True",
+      "link_to_thumbnail400_file": "True",
+      "link_to_original_file": "True",
+      "generate_expiring_link": "True"
+    }
+  }
+]
