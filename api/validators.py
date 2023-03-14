@@ -7,4 +7,4 @@ def validate_file_extension(value):
     ext = os.path.splitext(value.name)[1]
 
     if not ext.lower() in valid_extensions:
-        raise ValidationError({"message": "Unsupported file extension."})
+        raise ValidationError({"message": "Unsupported file extension. You can upload only .jpg, .jpeg and .png files."})
