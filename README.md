@@ -1,43 +1,69 @@
 ## ⚙️ Installation
 
-### Step 1: pip
+### Step 1: Install the virtual environment by running the following command.
 
 ```bash
-# thumbor with main dependencies only
-pip install thumbor
-# thumbor with main dependencies only
-pip install thumbor
+python3 -m pip install --user virtualenv
 ```
 
-### Step 2: Binary
+### Step 2: Clone a GitHub Repository
 
 ```bash
-sudo add-apt-repository ppa:thumbor/ppa
-sudo aptitude update
-sudo aptitude install thumbor
+git clone "https://github.com/patrykbrzozowski/image_api.git"
+```
+
+### Step 3: Change the directory to the recent clone repository in which the project is kept
+
+```bash
+cd image_api
+```
+
+### Step 4: Create a virtual environment
+
+```bash
+python -m venv env
+```
+
+### Step 5: Activate the virtual environment 
+
+```bash
+env\Scripts\activate
+```
+
+### Step 6: Install the requirements
+
+```bash
+pip install -r requirements.txt
+```
+
+### Step 7: Create migration
+
+```bash
+python manage.py makemigrations
+```
+
+### Step 8: Apply migration
+
+```bash
+python manage.py migrate
+```
+
+### Step 9: Load data from a json file into the database
+
+```bash
+python manage.py loaddata data.json
+```
+
+### Step 10: Create admin user
+
+```bash
+python manage.py createsuperuser
 ```
 
 ### Run
 
-Running it is as easy as hit:
+Run the Django server by running the below command
 
 ```bash
 python manage.py runserver
 ```
-
-## 🎯 Features
-
-- supports all common images formats out of the box
-- [intelligent cropping and resizing](http://thumbor.readthedocs.io/en/latest/detection_algorithms.html)
-- blazing fast using caching
-- supports many storages (local storage, AWS S3, Rackspace, Ceph, ...)
-- AI-powered cropping based on face and feature detection (glasses, interesting
-  points, ...)
-- integrated with many programming languages and frameworks
-  <img src="https://www.python.org/favicon.ico" width="16" height="16" /><img src="https://nodejs.org/static/images/favicons/favicon-32x32.png" width="16" height="16" /><img src="https://rubygems.org/favicon.ico" width="16" height="16" />
-  and many more...
-- [highly extensible](https://thumbor.readthedocs.io/en/latest/customizing.html)
-
-## 👀 Demo
-
-You can see thumbor in action at http://thumborize.me/
