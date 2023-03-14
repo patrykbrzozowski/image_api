@@ -67,3 +67,5 @@ Run the Django server by running the below command
 ```bash
 python manage.py runserver
 ```
+
+Go to the web browser and enter http://127.0.0.1:8000 to verify whether the application is running fine or not.
